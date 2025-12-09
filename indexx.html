@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Strona dla Natalkii</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="hello-kitty.png">
+</head>
+<body onload="onload()">
+    <header>
+        <h1>Hejka Natusia!<span>H</span></h1>
+    </header>
+    <main>
+        <section id="sekcja1">
+            <h2>Natalka,</h2>
+            <p>
+                Pierwsze co chcialbym zebys wiedziala czytajac to, to ze jestes naprawde bardzo wyjatkowa i cudowna dziewczyna.<br>
+                Masz sliczna buzie, sliczne oczy, nosek, usta, rzesy i brwi. Cala jestes przepiekna,
+                twoje wlosy czy brzuszek bardzo mi sie podobaja (twoja duza dupa tez). Bardzo mi na tobie zalezy
+                slodziaku i ciesze sie bardzo ze sie poznalismy bo mam kogos z kim chcialbym byc jak najdluzej. 
+                Po drugie pamietaj ze jestem z ciebie bardzo dumny, ze dajesz sobie rade mimo tego jak bardzo ci czasami ciezko.
+                Jestesmy jeszcze mlodzi i mamy sporo zycia przed soba i obysmy spedzili je razem. Razem na dobre i zle chwile,
+                zebysmy uczyli sie tego zycia razem.<br>
+                Zrobilem ta strone jako niespodzianke bez okazji i moze nie jest najlepsza ale kiedys zrobie lepsza obiecujee
+            </p>
+        </section>
+        <section id="sekcja2">
+            <center><h2>Rozmiary</h2></center>
+            <img src="earth.png" id="earth" alt="ziemia">
+            <img src="sun.png" id="sun" alt="slonce">
+            <img src="galaxy.png" id="galaxy" alt="kosmos">
+            <img src="heart.png" id="heart" alt="my love for u">
+            <button onclick="przewijanie()" id="sizeBtn">>>></button>
+        </section>
+        <section id="sekcja3">
+            <img src="present1.png" alt="prezent1" id="p1">
+            <img src="present2.png" alt="prezent2" id="p2">
+            <img src="present3.png" alt="prezent3" id="p3">
+            <img src="kwiaty.png" alt="kwiaty" id="kwiaty">
+            <h2 id="opisKwiaty">Dla najlepszej dziewczyny!</h2>
+            <button onclick="otwieranie()" id="buttonPrezent">Otwórz</button>
+        </section>
+        <section id="sekcja4">
+            <center><img src="prezent4.png" class="zdjecie" id="zdjP" onclick="prezent()">
+            <img src="zdjecie.png" class="zdjecie" id="zdjZ"></center>
+        </section>
+    </main>
+    <footer>
+        <span id="data">08-09.12.2025r</span>
+        <p>Patryk<span id="o">o</span></p>
+    </footer>
+    <script>
+        function onload() {
+            let earth = document.getElementById("earth");
+            let sun = document.getElementById("sun");
+            let galaxy = document.getElementById("galaxy");
+            let heart = document.getElementById("heart");
+            let btn = document.getElementById("sizeBtn");
+            earth.style.display = "block";
+            sun.style.display = "none";
+            galaxy.style.display = "none";
+            heart.style.display = "none";
+            btn.style.display = "block";
+
+            
+            let p1 = document.getElementById("p1");
+            let p2 = document.getElementById("p2");
+            let p3 = document.getElementById("p3");
+            let kwiaty = document.getElementById("kwiaty");
+            let opis = document.getElementById("opisKwiaty");
+            p1.style.display = "block";
+            p2.style.display = "none";
+            p3.style.display = "none";
+            kwiaty.style.display = "none";
+            opis.style.display = "none";
+            
+            let zdjZ = document.getElementById("zdjZ");
+            let zdjP = document.getElementById("zdjP");
+            zdjZ.style.display = "none";
+            zdjP.style.display = "block";
+        }
+        function przewijanie() {
+            let earth = document.getElementById("earth");
+            let sun = document.getElementById("sun");
+            let galaxy = document.getElementById("galaxy");
+            let heart = document.getElementById("heart");
+            let btn = document.getElementById("sizeBtn");
+
+            if (earth.style.display == "block") {
+                earth.style.display = "none";
+                sun.style.display = "block";
+                galaxy.style.display = "none";
+                heart.style.display = "none";
+            } else if (sun.style.display == "block") {
+                earth.style.display = "none";
+                sun.style.display = "none";
+                galaxy.style.display = "block";
+                heart.style.display = "none";
+            } else {
+                earth.style.display = "none";
+                sun.style.display = "none";
+                galaxy.style.display = "none";
+                heart.style.display = "block";
+                btn.style.display = "none";
+            }
+        }
+        function otwieranie() {
+            let p1 = document.getElementById("p1");
+            let p2 = document.getElementById("p2");
+            let p3 = document.getElementById("p3");
+            let kwiaty = document.getElementById("kwiaty");
+            let btn = document.getElementById("buttonPrezent");
+            let opis = document.getElementById("opisKwiaty");
+            if (p1.style.display == "block") {   
+                p1.style.display = "none";
+                p2.style.display = "block";
+                p3.style.display = "none";
+                btn.innerHTML = "Jeszcze trochę.."
+            } else if (p2.style.display == "block"){
+                p1.style.display = "none";
+                p2.style.display = "none";
+                p3.style.display = "block";
+                btn.innerHTML = "Jeszcze odbrobinkę.."
+            } else {
+                p1.style.display = "none";
+                p2.style.display = "none";
+                p3.style.display = "none";
+                btn.style.display = "none";
+                kwiaty.style.display = "block";
+                opis.style.display = "block";
+
+            }
+        }
+        function prezent() {
+            let zdjZ = document.getElementById("zdjZ");
+            let zdjP = document.getElementById("zdjP");
+            
+            zdjP.style.display = "none";
+            zdjP.style.filter = "opacity(0.5)";
+            alert("prezent zostal otworzony!");
+            zdjP.style.filter = "opacity(1)";
+            zdjZ.style.display = "block";
+        }
+    </script>
+</body>
+</html>
