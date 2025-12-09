@@ -8,9 +8,8 @@
     font-family: Minecraft;
     src: url('Minecraft.ttf');
 }
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1900px) {
     section {
-        margin: 0 auto 0 auto;
         width: 90%;
     }
 }
@@ -159,3 +158,4 @@ footer p {
     border-radius: 10px;
 
 }
+
