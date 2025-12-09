@@ -8,7 +8,7 @@
     font-family: Minecraft;
     src: url('Minecraft.ttf');
 }
-@media only screen and (orientation: portrait) {
+@media only screen and (max-width: 900px) {
     section {
         margin: 0 auto 0 auto;
         width: 90%;
@@ -157,4 +157,5 @@ footer p {
     width: 400px;
     height: 500px;
     border-radius: 10px;
+
 }
