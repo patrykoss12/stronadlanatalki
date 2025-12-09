@@ -13,7 +13,7 @@
         width: 90%;
     }
 }
-@media only screen and (min-width:900px) {
+@media only screen and (min-width:1900px) {
     section {
         width: 23.2%;
     }
@@ -158,4 +158,5 @@ footer p {
     border-radius: 10px;
 
 }
+
 
