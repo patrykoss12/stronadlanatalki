@@ -1,1 +1,1 @@
-# stronadlanatalki
+# przekieruj no
